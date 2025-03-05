@@ -23,7 +23,16 @@
       "applicationUrl": "https://localhost:44380;http://localhost:1298",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }      
+      }
+    },
+    "gms-laptop": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "gms-laptop"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:44380;http://localhost:1298"
     }
   }
 }
