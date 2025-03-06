@@ -15,6 +15,8 @@ using Umbraco.Cms.Core.PublishedCache;
 using Umbraco.Cms.Infrastructure.ModelsBuilder;
 using Umbraco.Cms.Core;
 using Umbraco.Extensions;
+using Umbraco.Cms.Core.Web;
+using GMS2025.Models;
 
 namespace gms2025.Models.PublishedModels
 {
@@ -26,7 +28,7 @@ namespace gms2025.Models.PublishedModels
 
 	/// <summary>Base</summary>
 	[PublishedModel("base")]
-	public partial class Base : PublishedContentModel, IBase
+	public partial class Base : BaseContentModel, IBase
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant

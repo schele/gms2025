@@ -1,3 +1,6 @@
+using GMS2025.Business.Generators;
+using Umbraco.Cms.Infrastructure.ModelsBuilder.Building;
+
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 var environmentName = builder.Environment.EnvironmentName;
@@ -10,6 +13,8 @@ builder.CreateUmbracoBuilder()
     .AddDeliveryApi()
     .AddComposers()
     .Build();
+
+builder.Services.AddSingleton<IModelsGenerator, CustomModelsGenerator>();
 
 WebApplication app = builder.Build();
 

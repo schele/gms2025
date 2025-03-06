@@ -15,12 +15,14 @@ using Umbraco.Cms.Core.PublishedCache;
 using Umbraco.Cms.Infrastructure.ModelsBuilder;
 using Umbraco.Cms.Core;
 using Umbraco.Extensions;
+using Umbraco.Cms.Core.Web;
+using GMS2025.Models;
 
 namespace gms2025.Models.PublishedModels
 {
 	/// <summary>Error</summary>
 	[PublishedModel("error")]
-	public partial class Error : PublishedContentModel
+	public partial class Error : BaseContentModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
