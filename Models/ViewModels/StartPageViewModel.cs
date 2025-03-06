@@ -5,7 +5,7 @@ namespace GMS2025.Models.ViewModels
 {
     public class StartPageViewModel : BasePageViewModel<Start>
     {
-        public StartPageViewModel(Start content, IUmbracoContextAccessor umbracoContextAccessor) : base(content, umbracoContextAccessor)
+        public StartPageViewModel(Start content) : base(content, StaticServiceProvider.Instance.GetService<IUmbracoContextAccessor>())
         {
         }
     }

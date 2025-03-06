@@ -1,4 +1,5 @@
 using GMS2025.Business.Generators;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Umbraco.Cms.Infrastructure.ModelsBuilder.Building;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
@@ -17,6 +18,9 @@ builder.CreateUmbracoBuilder()
 builder.Services.AddSingleton<IModelsGenerator, CustomModelsGenerator>();
 
 WebApplication app = builder.Build();
+
+// Register the global service provider
+StaticServiceProvider.Instance = app.Services;
 
 await app.BootUmbracoAsync();
 

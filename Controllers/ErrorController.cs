@@ -7,19 +7,19 @@ using Umbraco.Cms.Web.Common.Controllers;
 
 namespace GMS2025.Controllers
 {
-    public class StartController : RenderController
+    public class ErrorController : RenderController
     {
-        public StartController(ILogger<RenderController> logger, ICompositeViewEngine compositeViewEngine, IUmbracoContextAccessor umbracoContextAccessor) : base(logger, compositeViewEngine, umbracoContextAccessor)
+        public ErrorController(ILogger<RenderController> logger, ICompositeViewEngine compositeViewEngine, IUmbracoContextAccessor umbracoContextAccessor) : base(logger, compositeViewEngine, umbracoContextAccessor)
         {
         }
 
         public override IActionResult Index()
         {
-            var startPage = CurrentPage as Start;
+            var errorPage = CurrentPage as Error;
 
-            if (startPage != null)
+            if (errorPage != null)
             {
-                var model = new StartPageViewModel(startPage);
+                var model = new ErrorPageViewModel(errorPage);
 
                 return CurrentTemplate(model);
             }
