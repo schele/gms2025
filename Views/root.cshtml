@@ -8,13 +8,12 @@
 @{
     Layout = null;
 
-    var gtm = string.Empty;
+    var canonicalUrl = Model.CurrentPage.Url(mode: UrlMode.Absolute, culture: CultureInfo.CurrentUICulture.Name);
 }
 
 <!doctype html>
-<html lang="" data-bs-theme="auto">
+<html lang="@CultureInfo.CurrentUICulture.Name" data-bs-theme="auto">
 <head>
-    @* <script src="https://getbootstrap.com/docs/5.3/assets/js/color-modes.js"></script> *@
     <!-- Google Tag Manager -->
     <script>
         (function (w, d, s, l, i) {
@@ -26,8 +25,8 @@
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-KPBNKM6G');</script>
     <!-- End Google Tag Manager -->
-    @* <base href="https://getbootstrap.com" /> *@
-    <base href="~/">
+    @* <base href="https://getbootstrap.com" />
+    <base href="~/"> *@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@@docsearch/css@3">
     <script src="https://getbootstrap.com/docs/5.3/assets/js/color-modes.js"></script>
 
@@ -38,7 +37,7 @@
     <meta name="generator" content="Hugo 0.122.0">
     <title>Carousel Template · Bootstrap v5.3</title>
 
-    <link rel="canonical" href="">
+    <link rel="canonical" href="@canonicalUrl">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@@docsearch/css@3">
 
     <link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
