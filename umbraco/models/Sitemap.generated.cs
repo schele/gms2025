@@ -20,24 +20,14 @@ using GMS2025.Models;
 
 namespace gms2025.Models.PublishedModels
 {
-	// Mixin Content Type with alias "base"
-	/// <summary>Base</summary>
-	public partial interface IBase : IPublishedContent
-	{
-		/// <summary>Meta Robots</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.3.2+abc312c")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string MetaRobots { get; }
-	}
-
-	/// <summary>Base</summary>
-	[PublishedModel("base")]
-	public partial class Base : BaseContentModel, IBase
+	/// <summary>Sitemap</summary>
+	[PublishedModel("sitemap")]
+	public partial class Sitemap : BaseContentModel
 	{
 		// helpers
 #pragma warning disable 0109 // new is redundant
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.3.2+abc312c")]
-		public new const string ModelTypeAlias = "base";
+		public new const string ModelTypeAlias = "sitemap";
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.3.2+abc312c")]
 		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.3.2+abc312c")]
@@ -46,32 +36,19 @@ namespace gms2025.Models.PublishedModels
 			=> PublishedModelUtility.GetModelContentType(publishedSnapshotAccessor, ModelItemType, ModelTypeAlias);
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.3.2+abc312c")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<Base, TValue>> selector)
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(IPublishedSnapshotAccessor publishedSnapshotAccessor, Expression<Func<Sitemap, TValue>> selector)
 			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(publishedSnapshotAccessor), selector);
 #pragma warning restore 0109
 
 		private IPublishedValueFallback _publishedValueFallback;
 
 		// ctor
-		public Base(IPublishedContent content, IPublishedValueFallback publishedValueFallback)
+		public Sitemap(IPublishedContent content, IPublishedValueFallback publishedValueFallback)
 			: base(content, publishedValueFallback)
 		{
 			_publishedValueFallback = publishedValueFallback;
 		}
 
 		// properties
-
-		///<summary>
-		/// Meta Robots
-		///</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.3.2+abc312c")]
-		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		[ImplementPropertyType("metaRobots")]
-		public virtual string MetaRobots => GetMetaRobots(this, _publishedValueFallback);
-
-		/// <summary>Static getter for Meta Robots</summary>
-		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.3.2+abc312c")]
-		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetMetaRobots(IBase that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "metaRobots");
 	}
 }

@@ -50,5 +50,13 @@ namespace gms2025.Models.PublishedModels
 		}
 
 		// properties
+
+		///<summary>
+		/// Meta Robots
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.3.2+abc312c")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("metaRobots")]
+		public virtual string MetaRobots => global::gms2025.Models.PublishedModels.Base.GetMetaRobots(this, _publishedValueFallback);
 	}
 }

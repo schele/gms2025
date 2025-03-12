@@ -1,2 +1,3 @@
 ﻿User-agent: *
 Disallow: /
+Sitemap: https://localhost:44380/sitemap
