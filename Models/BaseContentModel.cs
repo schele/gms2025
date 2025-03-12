@@ -73,6 +73,21 @@ namespace GMS2025.Models
             }
         }
 
+        public Settings? SettingsPage
+        {
+            get
+            {
+                if (_umbracoContextAccessor.TryGetUmbracoContext(out var umbracoContext))
+                {
+                    var content = umbracoContext.Content;
+
+                    return content?.GetAtRoot().DescendantsOrSelf<Settings>().FirstOrDefault();
+                }
+
+                return null;
+            }
+        }
+
         public Login? LoginPage
         {
             get
