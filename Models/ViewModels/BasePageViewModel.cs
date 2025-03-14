@@ -1,5 +1,5 @@
 ﻿using gms2025.Models.PublishedModels;
-using GMS2025.Business.Services;
+using GMS2025.Business.Interfaces;
 using Umbraco.Cms.Core.Models.PublishedContent;
 using Umbraco.Cms.Core.Web;
 

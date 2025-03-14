@@ -1,4 +1,6 @@
 using GMS2025.Business.Generators;
+using GMS2025.Business.Services.Interfaces;
+using GMS2025.Business.Services;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Umbraco.Cms.Infrastructure.ModelsBuilder.Building;
 
@@ -16,6 +18,7 @@ builder.CreateUmbracoBuilder()
     .Build();
 
 builder.Services.AddSingleton<IModelsGenerator, CustomModelsGenerator>();
+builder.Services.AddScoped<ISitemapService, SitemapService>();
 
 WebApplication app = builder.Build();
 
