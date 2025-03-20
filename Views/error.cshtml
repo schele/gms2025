@@ -7,4 +7,33 @@
 	Layout = "root.cshtml";
 }
 
-<h1>404 - PAGE NOT FOUND</h1>
+<style>
+
+    .error-container {
+        text-align: center;
+        padding-bottom: 3rem;
+    }
+
+    .error-code {
+        font-size: 120px;
+        font-weight: bold;
+        color: #6c757d;
+    }
+
+    .error-message {
+        font-size: 24px;
+        color: #6c757d;
+    }
+
+    .home-link {
+        margin-top: 20px;
+    }
+</style>
+
+
+<div class="bg-body-tertiary error-container">
+    @Html.Raw(Model.Content.ErrorMessage)
+    @* <div class="error-code">404</div>
+    <div class="error-message">Oops! Sidan du letar efter kunde inte hittas.</div>
+    <a href="/" class="btn btn-secondary home-link">Tillbaka till startsidan</a> *@
+</div>

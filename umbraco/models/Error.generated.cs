@@ -50,5 +50,13 @@ namespace gms2025.Models.PublishedModels
 		}
 
 		// properties
+
+		///<summary>
+		/// Error Message
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "14.3.3+d9fb6df")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("errorMessage")]
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString ErrorMessage => this.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(_publishedValueFallback, "errorMessage");
 	}
 }
